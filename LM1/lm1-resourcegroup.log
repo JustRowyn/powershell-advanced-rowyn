@@ -1,0 +1,162 @@
+**********************
+PowerShell transcript start
+Start time: 20260823203028
+Username: PA-rowyn\student
+RunAs User: PA-rowyn\student
+Configuration Name: 
+Machine: PA-rowyn (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.5.0_x64__8wekyb3d8bbwe\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\student\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2025.4.0' -BundledModulesPath 'c:\Users\student\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2025.4.0
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Warning' -LogPath 'c:\Users\student\AppData\Roaming\Code\logs\20260823T183039\window1\exthost\ms-vscode.powershell' -SessionDetailsPath 'c:\Users\student\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-1992-952231.json' -FeatureFlags @() 
+Process ID: 8292
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26100
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is lm1-resourcegroup.log
+New-AzResourceGroup: C:\powershell-advanced-rowyn\LM1\create-resourcegroup.ps1:25:5
+Line |
+  25 |      New-AzResourceGroup `
+     |      ~~~~~~~~~~~~~~~~~~~~~
+     | The provided location 'not a real place' is not available for resource group. List of available regions is 'eastasia,southeastasia,austriaeast,australiaeast,australiacentral,australiacentral2,australiasoutheast,belgiumcentral,brazilsouth,canadacentral,canadaeast,switzerlandnorth,chilecentral,denmarkeast,germanywestcentral,eastus2,eastus,centralus,northcentralus,francecentral,uksouth,ukwest,indonesiacentral,israelcentral,centralindia,southindia,jioindiawest,italynorth,japaneast,japanwest,koreacentral,koreasouth,malaysiawest,mexicocentral,northeurope,norwayeast,newzealandnorth,polandcentral,qatarcentral,spaincentral,swedencentral,uaenorth,westcentralus,westeurope,westus2,westus,southcentralus,westus3,southafricanorth,westindia,jioindiacentral,indiasouthcentral'. StatusCode: 400 ReasonPhrase: Bad Request OperationID : e73cae61-166f-4750-a2b6-650be1143359
+New-AzResourceGroup: C:\powershell-advanced-rowyn\LM1\create-resourcegroup.ps1:25:5
+Line |
+  25 |      New-AzResourceGroup `
+     |      ~~~~~~~~~~~~~~~~~~~~~
+     | The provided location 'not a real place' is not available for resource group. List of available regions is
+     | 'eastasia,southeastasia,austriaeast,australiaeast,australiacentral,australiacentral2,australiasoutheast,belgiumcentral,brazilsouth,canadacentral,canadaeast,switzerlandnorth,chilecentral,denmarkeast,germanywestcentral,eastus2,eastus,centralus,northcentralus,francecentral,uksouth,ukwest,indonesiacentral,israelcentral,centralindia,southindia,jioindiawest,italynorth,japaneast,japanwest,koreacentral,koreasouth,malaysiawest,mexicocentral,northeurope,norwayeast,newzealandnorth,polandcentral,qatarcentral,spaincentral,swedencentral,uaenorth,westcentralus,westeurope,westus2,westus,southcentralus,westus3,southafricanorth,westindia,jioindiacentral,indiasouthcentral'. StatusCode: 400 ReasonPhrase: Bad Request OperationID : e73cae61-166f-4750-a2b6-650be1143359
+
+Script execution completed.
+**********************
+PowerShell transcript end
+End time: 20260823203032
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260823203116
+Username: PA-rowyn\student
+RunAs User: PA-rowyn\student
+Configuration Name: 
+Machine: PA-rowyn (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.5.0_x64__8wekyb3d8bbwe\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\student\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2025.4.0' -BundledModulesPath 'c:\Users\student\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2025.4.0
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Warning' -LogPath 'c:\Users\student\AppData\Roaming\Code\logs\20260823T183039\window1\exthost\ms-vscode.powershell' -SessionDetailsPath 'c:\Users\student\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-1992-952231.json' -FeatureFlags @() 
+Process ID: 8292
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26100
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is lm1-resourcegroup.log
+New-AzResourceGroup: C:\powershell-advanced-rowyn\LM1\create-resourcegroup.ps1:25:5
+Line |
+  25 |      New-AzResourceGroup `
+     |      ~~~~~~~~~~~~~~~~~~~~~
+     | The provided location 'not a real place' is not available for resource group. List of available regions is 'eastasia,southeastasia,austriaeast,australiaeast,australiacentral,australiacentral2,australiasoutheast,belgiumcentral,brazilsouth,canadacentral,canadaeast,switzerlandnorth,chilecentral,denmarkeast,germanywestcentral,eastus2,eastus,centralus,northcentralus,francecentral,uksouth,ukwest,indonesiacentral,israelcentral,centralindia,southindia,jioindiawest,italynorth,japaneast,japanwest,koreacentral,koreasouth,malaysiawest,mexicocentral,northeurope,norwayeast,newzealandnorth,polandcentral,qatarcentral,spaincentral,swedencentral,uaenorth,westcentralus,westeurope,westus2,westus,southcentralus,westus3,southafricanorth,westindia,jioindiacentral,indiasouthcentral'. StatusCode: 400 ReasonPhrase: Bad Request OperationID : 26140872-be74-4068-aeac-f4e550000502
+New-AzResourceGroup: C:\powershell-advanced-rowyn\LM1\create-resourcegroup.ps1:25:5
+Line |
+  25 |      New-AzResourceGroup `
+     |      ~~~~~~~~~~~~~~~~~~~~~
+     | The provided location 'not a real place' is not available for resource group. List of available regions is
+     | 'eastasia,southeastasia,austriaeast,australiaeast,australiacentral,australiacentral2,australiasoutheast,belgiumcentral,brazilsouth,canadacentral,canadaeast,switzerlandnorth,chilecentral,denmarkeast,germanywestcentral,eastus2,eastus,centralus,northcentralus,francecentral,uksouth,ukwest,indonesiacentral,israelcentral,centralindia,southindia,jioindiawest,italynorth,japaneast,japanwest,koreacentral,koreasouth,malaysiawest,mexicocentral,northeurope,norwayeast,newzealandnorth,polandcentral,qatarcentral,spaincentral,swedencentral,uaenorth,westcentralus,westeurope,westus2,westus,southcentralus,westus3,southafricanorth,westindia,jioindiacentral,indiasouthcentral'. StatusCode: 400 ReasonPhrase: Bad Request OperationID : 26140872-be74-4068-aeac-f4e550000502
+
+Write-Error: Failed to create resource group: The term '-ErrorAction' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Write-Error: Failed to create resource group: The term '-ErrorAction' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+Script execution completed.
+**********************
+PowerShell transcript end
+End time: 20260823203120
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260823203312
+Username: PA-rowyn\student
+RunAs User: PA-rowyn\student
+Configuration Name: 
+Machine: PA-rowyn (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.5.0_x64__8wekyb3d8bbwe\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\student\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2025.4.0' -BundledModulesPath 'c:\Users\student\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2025.4.0
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Warning' -LogPath 'c:\Users\student\AppData\Roaming\Code\logs\20260823T183039\window1\exthost\ms-vscode.powershell' -SessionDetailsPath 'c:\Users\student\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-1992-952231.json' -FeatureFlags @() 
+Process ID: 8292
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26100
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is lm1-resourcegroup.log
+
+ResourceGroupName : rg-test123
+Location          : centralus
+ProvisioningState : Succeeded
+Tags              : 
+ResourceId        : /subscriptions/9acdcabc-d661-4005-9354-58da8f13dcb3/resourceGroups/rg-test123
+
+Script execution completed.
+**********************
+PowerShell transcript end
+End time: 20260823203313
+**********************
+**********************
+PowerShell transcript start
+Start time: 20260823203841
+Username: PA-rowyn\student
+RunAs User: PA-rowyn\student
+Configuration Name: 
+Machine: PA-rowyn (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Program Files\WindowsApps\Microsoft.PowerShell_7.6.5.0_x64__8wekyb3d8bbwe\pwsh.dll -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\student\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2025.4.0' -BundledModulesPath 'c:\Users\student\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2025.4.0
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Warning' -LogPath 'c:\Users\student\AppData\Roaming\Code\logs\20260823T183039\window1\exthost\ms-vscode.powershell' -SessionDetailsPath 'c:\Users\student\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-1992-952231.json' -FeatureFlags @() 
+Process ID: 8292
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26100
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is lm1-resourcegroup.log
+
+ResourceGroupName : rg-test8
+Location          : centralus
+ProvisioningState : Succeeded
+Tags              : 
+ResourceId        : /subscriptions/9acdcabc-d661-4005-9354-58da8f13dcb3/resourceGroups/rg-test8
+
+Script execution completed.
+**********************
+PowerShell transcript end
+End time: 20260823203842
+**********************
