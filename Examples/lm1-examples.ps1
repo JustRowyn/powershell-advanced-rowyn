@@ -35,9 +35,17 @@ param (
     [string][ValidateLength(1,10)]$ResourceGroupName
 )
 
-New-AzResourceGroup `
-    -Name $ResourceGroupName `
-    -Location "Central US"
+Start-Transcript -path "lm1-examples.log" -Append
+try {
+    New-AzResourceGroup `
+        -Name $ResourceGroupName `
+        -Location "Central US"
+} catch {
+    Write-Error "Failed to create resource group: $_"
+} finally {
+    Write-Host "Script execution completed."
+}
+Stop-Transcript
 
 # for loop example
 for ($i=0; $i -lt $ResourceGroupName.count; $i++) {
