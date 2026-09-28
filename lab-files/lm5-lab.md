@@ -13,3 +13,11 @@
 - Dot-sourcing (`. $file.FullName`) loads each file into the module's scope so its functions stay available.
 - Tested with: `Import-Module .\NWTC.ResourceGroups.psm1 -Force -Verbose`
 - Without `Export-ModuleMember`, a `.psm1` exports every function by default.
+
+#Task 3: Module Manifest
+- A manifest stores module metadata: author, version, description, and which file holds the code.
+- Created with:
+  `New-ModuleManifest -Path .\NWTC.ResourceGroups.psd1 -Author "Rowyn Rodenbeck" -ModuleVersion 1.0.0 -Description "Test resource group creation" -RootModule NWTC.ResourceGroups.psm1`
+- `-RootModule` is needed so importing the .psd1 also loads the .psm1. Without it, the module imports with no commands.
+- `Test-ModuleManifest` validates the manifest. ExportedCommands shows blank because `FunctionsToExport = '*'` isn't expanded until the module is actually imported.
+- `Import-Module .\NWTC.ResourceGroups.psd1 -Force -Verbose` loads psd1 → psm1 → public functions.
