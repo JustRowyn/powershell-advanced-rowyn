@@ -20,6 +20,11 @@ function Write-ModuleLog {
     Write-ModuleLog -Path "C:\Logs" -FileName "lm5-resourcegroup.log" -Message "Resource group created."
     .EXAMPLE
     Write-ModuleLog -Path "C:\Logs" -FileName "lm5-resourcegroup.log" -Message "Creation failed." -Level ERROR
+      .NOTES
+    Module:   NWTC.ResourceGroups
+    Version:  1.0.0
+    Author:   Rowyn Rodenbeck
+    Scope:    Private (not exported). Used internally by module functions.
     #>
     [CmdletBinding()]
     param (

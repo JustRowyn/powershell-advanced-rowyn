@@ -22,6 +22,14 @@ function New-TestResourceGroup {
     New-TestResourceGroup -ProjectID 1001
     .EXAMPLE
     "1001","1002","1003" | New-TestResourceGroup
+    .NOTES
+    Module:   NWTC.ResourceGroups
+    Version:  1.0.0
+    Author:   Rowyn Rodenbeck
+    Requires: Az.Resources module and an active Azure session (Connect-AzAccount)
+    Logs:     output\lm5-resourcegroup.log (via private Write-ModuleLog helper)
+    .LINK
+    https://github.com/JustRowyn/powershell-advanced-rowyn
     #>
     [CmdletBinding(SupportsShouldProcess=$true)]
     param (

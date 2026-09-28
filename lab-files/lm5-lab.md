@@ -49,3 +49,10 @@
 | Log location | Ran from `C:\` | Log still written to repo `output` folder; `Test-Path C:\output` = False |
 
 - Log file (`output\lm5-resourcegroup.log`) contains start, per-resource-group, result, summary, and finish entries for every run.
+
+#Task 7: Prepare for Distribution
+- Created `NWTC.ResourceGroups\Docs\README.md` with module purpose, features, structure, requirements, installation, usage examples, and version history.
+- Updated `create-resourcegroup\README.md` (function README) to document parameters, examples, output, logging, and point to the module as the maintained version.
+- Updated the repository `readme.md` with repo structure, a module overview and quick start, and course progress.
+- Added `.NOTES` (module, version, author) and `.LINK` to the comment-based help in `New-TestResourceGroup` and `.NOTES` to `Write-ModuleLog`.
+- Verified with `Get-Help New-TestResourceGroup -Full`: NOTES and RELATED LINKS appear.
