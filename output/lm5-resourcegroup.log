@@ -3,3 +3,27 @@
 [2026-09-28 14:01:24] [WARNING] [student] Resource group 'RG-5001' skipped (WhatIf or declined).
 [2026-09-28 14:01:24] [INFO] [student] Summary - Processed: 1, Created: 0, Errors: 0, Skipped: 1
 [2026-09-28 14:01:24] [INFO] [student] ===== New-TestResourceGroup finished =====
+[2026-09-28 14:04:52] [INFO] [student] ===== New-TestResourceGroup started =====
+[2026-09-28 14:04:52] [INFO] [student] Processing resource group 'RG-LM5'.
+[2026-09-28 14:04:58] [INFO] [student] Resource group 'RG-LM5' created successfully.
+[2026-09-28 14:04:58] [INFO] [student] Summary - Processed: 1, Created: 1, Errors: 0, Skipped: 0
+[2026-09-28 14:04:58] [INFO] [student] ===== New-TestResourceGroup finished =====
+[2026-09-28 14:05:27] [INFO] [student] ===== New-TestResourceGroup started =====
+[2026-09-28 14:05:27] [INFO] [student] Processing resource group 'RG-5002'.
+[2026-09-28 14:05:28] [INFO] [student] Resource group 'RG-5002' created successfully.
+[2026-09-28 14:05:28] [INFO] [student] Summary - Processed: 1, Created: 1, Errors: 0, Skipped: 0
+[2026-09-28 14:05:28] [INFO] [student] ===== New-TestResourceGroup finished =====
+[2026-09-28 14:05:39] [INFO] [student] ===== New-TestResourceGroup started =====
+[2026-09-28 14:05:39] [INFO] [student] Processing resource group 'RG-5003'.
+[2026-09-28 14:05:40] [INFO] [student] Resource group 'RG-5003' created successfully.
+[2026-09-28 14:05:40] [INFO] [student] Processing resource group 'RG-5004'.
+[2026-09-28 14:05:41] [INFO] [student] Resource group 'RG-5004' created successfully.
+[2026-09-28 14:05:41] [INFO] [student] Processing resource group 'RG-5005'.
+[2026-09-28 14:05:42] [INFO] [student] Resource group 'RG-5005' created successfully.
+[2026-09-28 14:05:42] [INFO] [student] Summary - Processed: 3, Created: 3, Errors: 0, Skipped: 0
+[2026-09-28 14:05:42] [INFO] [student] ===== New-TestResourceGroup finished =====
+[2026-09-28 14:06:16] [INFO] [student] ===== New-TestResourceGroup started =====
+[2026-09-28 14:06:17] [INFO] [student] Processing resource group 'RG-5006'.
+[2026-09-28 14:06:17] [WARNING] [student] Resource group 'RG-5006' skipped (WhatIf or declined).
+[2026-09-28 14:06:17] [INFO] [student] Summary - Processed: 1, Created: 0, Errors: 0, Skipped: 1
+[2026-09-28 14:06:17] [INFO] [student] ===== New-TestResourceGroup finished =====

@@ -37,3 +37,15 @@
 - Issue: with `-WhatIf`, the WhatIf setting was inherited by `Add-Content` in the helper, so nothing got logged. Fixed with `-WhatIf:$false` on `Add-Content` and `New-Item`.
 - Must re-run `Import-Module ... -Force` after every code change, or the old version stays in memory.
 - Log timestamps are in UTC because the Azure VM's clock is UTC.
+
+#Task 6: Testing the Module
+| Test | Command | Result |
+|------|---------|--------|
+| ResourceGroupName | `New-TestResourceGroup -ResourceGroupName "RG-LM5"` | Created |
+| ProjectID | `New-TestResourceGroup -ProjectID 5002` | RG-5002 Created |
+| Pipeline + multiple values | `"5003","5004","5005" \| New-TestResourceGroup` | 3 processed, 3 created, one summary |
+| WhatIf | `New-TestResourceGroup -ProjectID 5006 -WhatIf` | Skipped, logged as WARNING |
+| Validation | `-ResourceGroupName "ThisNameIsTooLong"` | Rejected by ValidateLength (not logged, since it fails before Begin runs) |
+| Log location | Ran from `C:\` | Log still written to repo `output` folder; `Test-Path C:\output` = False |
+
+- Log file (`output\lm5-resourcegroup.log`) contains start, per-resource-group, result, summary, and finish entries for every run.
