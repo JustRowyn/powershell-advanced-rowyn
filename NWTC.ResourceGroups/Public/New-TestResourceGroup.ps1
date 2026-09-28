@@ -4,9 +4,11 @@ function New-TestResourceGroup {
     Creates a new Azure Resource Group
     .DESCRIPTION
     This function creates an Azure resource group using a mandatory, validated
-    resource group name or a project ID. It includes comment-based help, 
-    parameter validation, error handling, and logging. Supports processing 
+    resource group name or a project ID. It includes comment-based help,
+    parameter validation, error handling, and logging. Supports processing
     multiple pipeline inputs and reports summary statistics.
+    Logging is handled by the module's private Write-ModuleLog helper and is
+    written to the repository's output folder (lm5-resourcegroup.log).
     .PARAMETER ResourceGroupName
     The name of the resource group to create. Must be between 1 and 10 characters.
     .PARAMETER ProjectID
@@ -20,7 +22,7 @@ function New-TestResourceGroup {
     New-TestResourceGroup -ProjectID 1001
     .EXAMPLE
     "1001","1002","1003" | New-TestResourceGroup
-#>
+    #>
     [CmdletBinding(SupportsShouldProcess=$true)]
     param (
         [Parameter(Mandatory=$true, ParameterSetName="ByName")]
@@ -34,7 +36,13 @@ function New-TestResourceGroup {
 
     Begin {
         Write-Verbose "Starting New-TestResourceGroup function..."
-        Start-Transcript -path "..\output\lm4-resourcegroup.log" -Append | Out-Null
+
+        # Log location is based on this file's location, not the terminal's current folder
+        # $PSScriptRoot = ...\NWTC.ResourceGroups\Public  ->  ..\..\output = repo output folder
+        $logPath = [System.IO.Path]::GetFullPath((Join-Path -Path $PSScriptRoot -ChildPath "..\..\output"))
+        $logFile = "lm5-resourcegroup.log"
+
+        Write-ModuleLog -Path $logPath -FileName $logFile -Message "===== New-TestResourceGroup started ====="
 
         $totalProcessed = 0
         $totalCreated   = 0
@@ -52,7 +60,7 @@ function New-TestResourceGroup {
         }
 
         Write-Verbose "Processing resource group: $currentName"
-        Write-Verbose "Validation successful for resource group name: $currentName"
+        Write-ModuleLog -Path $logPath -FileName $logFile -Message "Processing resource group '$currentName'."
 
         $result = [PSCustomObject]@{
             ResourceGroupName = $currentName
@@ -73,14 +81,17 @@ function New-TestResourceGroup {
                 $result.Status = "Created"
                 $totalCreated++
                 Write-Verbose "Resource group '$currentName' created successfully."
+                Write-ModuleLog -Path $logPath -FileName $logFile -Message "Resource group '$currentName' created successfully."
             } else {
                 $result.Status = "Skipped"
                 $totalSkipped++
+                Write-ModuleLog -Path $logPath -FileName $logFile -Message "Resource group '$currentName' skipped (WhatIf or declined)." -Level WARNING
             }
         } catch {
             Write-Error "Failed to create resource group: $_"
             $result.Status = "Error"
             $totalErrors++
+            Write-ModuleLog -Path $logPath -FileName $logFile -Message "Failed to create resource group '$currentName': $($_.Exception.Message)" -Level ERROR
         }
 
         $result
@@ -95,6 +106,8 @@ function New-TestResourceGroup {
         Write-Host "Created successfully     : $totalCreated"
         Write-Host "Errors                   : $totalErrors"
         Write-Host "Skipped                  : $totalSkipped"
-        Stop-Transcript | Out-Null
+
+        Write-ModuleLog -Path $logPath -FileName $logFile -Message "Summary - Processed: $totalProcessed, Created: $totalCreated, Errors: $totalErrors, Skipped: $totalSkipped"
+        Write-ModuleLog -Path $logPath -FileName $logFile -Message "===== New-TestResourceGroup finished ====="
     }
 }

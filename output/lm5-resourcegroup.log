@@ -1,0 +1,5 @@
+[2026-09-28 14:01:23] [INFO] [student] ===== New-TestResourceGroup started =====
+[2026-09-28 14:01:23] [INFO] [student] Processing resource group 'RG-5001'.
+[2026-09-28 14:01:24] [WARNING] [student] Resource group 'RG-5001' skipped (WhatIf or declined).
+[2026-09-28 14:01:24] [INFO] [student] Summary - Processed: 1, Created: 0, Errors: 0, Skipped: 1
+[2026-09-28 14:01:24] [INFO] [student] ===== New-TestResourceGroup finished =====

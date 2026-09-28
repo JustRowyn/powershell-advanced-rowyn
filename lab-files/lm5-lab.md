@@ -27,3 +27,13 @@
 - `BaseName` is the file name without `.ps1`, so each Public file's name must match its function name.
 - Without Export-ModuleMember, every function in the module is exported, including private helpers.
 - Verified with `Get-Command -Module NWTC.ResourceGroups`, which shows only `New-TestResourceGroup`.
+
+#Task 5: Private Helper Function
+- Created `Private\Write-ModuleLog.ps1` with parameters: `-Path` (folder), `-FileName`, `-Message`, `-Level` (INFO/WARNING/ERROR).
+- Each entry is written as: `[timestamp] [level] [username] message`. `Add-Content` creates the file if it doesn't exist.
+- Replaced `Start-Transcript`/`Stop-Transcript` in `New-TestResourceGroup` with `Write-ModuleLog` calls (start, each resource group, created/skipped/error, summary, finish).
+- The .psm1 dot-sources both Public and Private files but only exports Public, so `Get-Command -Module NWTC.ResourceGroups` shows only `New-TestResourceGroup`.
+- Issue: the old log path `..\output\...` was relative to the terminal's current folder. Fixed by building the path from `$PSScriptRoot` (`..\..\output` from the Public folder).
+- Issue: with `-WhatIf`, the WhatIf setting was inherited by `Add-Content` in the helper, so nothing got logged. Fixed with `-WhatIf:$false` on `Add-Content` and `New-Item`.
+- Must re-run `Import-Module ... -Force` after every code change, or the old version stays in memory.
+- Log timestamps are in UTC because the Azure VM's clock is UTC.
