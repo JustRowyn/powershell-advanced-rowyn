@@ -1,24 +1,26 @@
 #powershell-advanced-rowyn
 
-Coursework repository for **PowerShell Advanced**. It follows one project, automating Azure resource group creation, from a simple script to a distributable PowerShell module.
+Coursework repository for **PowerShell Advanced**. It follows one project, automating Azure resource group creation, from a simple script to a distributable, versioned PowerShell module.
 
 #Repository Structure
 | Folder | Contents |
 |--------|----------|
-| [`NWTC.ResourceGroups/`](NWTC.ResourceGroups/Docs/README.md) | **Current**: the `NWTC.ResourceGroups` PowerShell module (LM5) |
-| [`create-resourcegroup/`](create-resourcegroup/README.md) | Original script, advanced function, and Pester tests (LM1–LM4) |
+| [`NWTC.ResourceGroups/`](NWTC.ResourceGroups/Docs/README.md) | **Current**: the `NWTC.ResourceGroups` PowerShell module (LM5-LM6) |
+| [`create-resourcegroup/`](create-resourcegroup/README.md) | Original script, advanced function, and Pester tests (LM1-LM4) |
 | `Examples/` | Example files from earlier labs |
-| `lab-files/` | Lab notes for each learning module (`lm1-lab.md` – `lm5-lab.md`) |
+| `lab-files/` | Lab notes for each learning module (`lm1-lab.md` - `lm6-lab.md`) |
 | `output/` | Log files from each lab |
 
 #NWTC.ResourceGroups Module
-A company-supported module that packages `New-TestResourceGroup` for reuse, versioning, and distribution. It will expand to include resource group reporting, auditing, and lifecycle management commands.
+A company-supported module that packages Azure resource group automation for reuse, versioning, and distribution. It continues to expand with reporting, auditing, and lifecycle management commands.
 
-- **Version:** 1.0.0
-- **Public:** `New-TestResourceGroup`
+- **Version:** 1.1.0
+- **Public:** `New-TestResourceGroup`, `Get-ResourceGroupSummary`
 - **Private:** `Write-ModuleLog` (internal logging helper)
 
 Full documentation: [NWTC.ResourceGroups/Docs/README.md](NWTC.ResourceGroups/Docs/README.md)
+Version history: [NWTC.ResourceGroups/Docs/CHANGELOG.md](NWTC.ResourceGroups/Docs/CHANGELOG.md)
+Release notes: [NWTC.ResourceGroups/Docs/RELEASENOTES.md](NWTC.ResourceGroups/Docs/RELEASENOTES.md)
 
 #Quick Start
 ```powershell
@@ -43,12 +45,28 @@ Example:
 Get-Content .\ResourceGroups.txt | New-TestResourceGroup
 ```
 
+#Get-ResourceGroupSummary
+
+Added in LM6 (v1.1.0). Returns a quick summary (ResourceGroupName, Location, Tags) for one or all resource groups in the current subscription.
+
+Example:
+```powershell
+Get-ResourceGroupSummary -ResourceGroupName "RG-1001"
+Get-ResourceGroupSummary
+```
+
+#Releases
+Packaged, distributable versions of the module are available as zip files in [`NWTC.ResourceGroups/Releases/`](NWTC.ResourceGroups/Releases/).
+
+- `NWTC.ResourceGroups1.1.0.zip` - current release
+
 #Course Progress
 | Module | Focus |
 |--------|-------|
-| LM1–LM2 | Script basics, validation, error handling, logging, Pester tests |
+| LM1-LM2 | Script basics, validation, error handling, logging, Pester tests |
 | LM3 | Advanced function |
 | LM4 | Parameter sets, pipeline support, Begin/Process/End |
 | LM5 | PowerShell module: structure, manifest, exports, private helpers |
+| LM6 | Module lifecycle management: new feature, semantic versioning, changelog, release notes, packaging/distribution |
 
 **Author:** Rowyn Rodenbeck
